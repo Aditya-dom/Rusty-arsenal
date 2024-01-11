@@ -1,6 +1,6 @@
 # Manual Mapper
 
-A manual mapper written in Rust
+A manual mapper written in Rust.
 
 ## USAGE
 ```
