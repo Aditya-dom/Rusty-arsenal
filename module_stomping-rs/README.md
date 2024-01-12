@@ -1,10 +1,10 @@
 # Module Stomping / Module Overloading / DLL Hollowing
 
-A basic/simple PoC in Rust made for fun, practice, and learning. Check out my Manual Mapper in Rust: https://github.com/memN0ps/mmapper-rs or Shellcode Reflective DLL Injection in Rust: https://github.com/memN0ps/srdi-rs for alternatives.
+A basic/simple PoC in Rust made for fun, practice, and learning. Check out my Manual Mapper in Rust: https://github.com/aditya-dom/mmapper-rs or Shellcode Reflective DLL Injection in Rust: https://github.com/aditya-dom/srdi-rs for alternatives.
 
 ## Description
 
-Module stomping injects a Microsoft-signed DLL (e.g amsi.dll) using a classic DLL Injection technique that uses as shown here: [Classic DLL Injection in Rust](https://github.com/memN0ps/arsenal-rs/tree/main/dll_injector_classic-rs). It will then read the `AddressOfEntryPoint` of the injected DLL from the target process and overwrite the content with shellcode.
+Module stomping injects a Microsoft-signed DLL (e.g amsi.dll) using a classic DLL Injection technique that uses as shown here: [Classic DLL Injection in Rust](https://github.com/aditya-dom/arsenal-rs/tree/main/dll_injector_classic-rs). It will then read the `AddressOfEntryPoint` of the injected DLL from the target process and overwrite the content with shellcode.
 
 In this example we use the following steps to perfrom a classic DLL Injection of `amsi.dll` inside `notepad.exe` and then inject our shellcode inside `amsi.dll's` entry point:
 
@@ -24,7 +24,7 @@ We can now inject our shellcode into the target process
 
 Microsoft Signed DLL
 ```
-PS C:\Users\memn0ps\Documents\GitHub\arsenal-rs\module_stomping-rs\target\release> sigcheck C:\Windows\System32\amsi.dll
+PS C:\Users\aditya-dom\Documents\GitHub\arsenal-rs\module_stomping-rs\target\release> sigcheck C:\Windows\System32\amsi.dll
 
 Sigcheck v2.90 - File version and signature viewer
 Copyright (C) 2004-2022 Mark Russinovich
@@ -81,7 +81,7 @@ $env:RUST_LOG="debug"
 
 Inject amsi.dll
 ```
-PS C:\Users\memn0ps\Documents\GitHub\arsenal-rs\module_stomping-rs\target\release> .\module_stomping-rs.exe notepad.exe C:\Windows\System32\amsi.dll amsi.dll
+PS C:\Users\aditya-dom\Documents\GitHub\arsenal-rs\module_stomping-rs\target\release> .\module_stomping-rs.exe notepad.exe C:\Windows\System32\amsi.dll amsi.dll
 
 [2022-11-07T23:12:34Z INFO  module_stomping_rs] [+] Process: notepad.exe
 [2022-11-07T23:12:34Z INFO  module_stomping_rs] [+] Path: C:\Windows\System32\amsi.dll
