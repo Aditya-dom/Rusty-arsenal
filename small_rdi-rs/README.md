@@ -4,7 +4,7 @@ A small reflective loader PoC in Rust. I remade this from my old project (https:
 
 ## Features
 
-More coming soon, maybe or maybe I'll modify the Shellcode Reflective DLL Injection project to work better: https://github.com/memN0ps/srdi-rs
+More coming soon, maybe or maybe I'll modify the Shellcode Reflective DLL Injection project to work better: https://github.com/Aditya-dom/Rusty-arsenal
 
 ## Example
 
@@ -63,3 +63,6 @@ Note: This is just a PoC, and there is still some OPSEC to worry about. I'll lea
 * https://disman.tl/2015/01/30/an-improved-reflective-dll-injection-technique.html
 * https://www.netspi.com/blog/technical/adversary-simulation/srdi-shellcode-reflective-dll-injection/
 * https://discord.com/invite/rust-lang-community (Rust Community #windows-dev channel)
+
+
+## Thank you
