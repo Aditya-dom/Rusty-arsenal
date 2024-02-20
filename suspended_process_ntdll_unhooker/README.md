@@ -28,6 +28,7 @@ This process injection technique allows us to create a process in a suspended st
 3. We read the `.text` section of the remote process's NTDLL module, using `ReadProcessMemory`, and write it to the `.text` section of the local process's NTDLL module.
 
 4. We should be able to call functions normally as all of the functions inside `ntdll.dll` are not hooked anymore.
+5. We should not use kerenal switches 
 
 
 ## Practical Test
